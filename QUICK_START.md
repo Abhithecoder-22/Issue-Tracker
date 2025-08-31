@@ -1,5 +1,18 @@
 #  Quick Start Guide
 
+
+## ⚠️ Installation Note
+
+**If you get errors running `npm install`, use:**
+
+```bash
+npm install --legacy-peer-deps
+```
+
+This is required due to some peer dependency conflicts in the current package versions.
+
+---
+
 ##  What's Done
 -  Dependencies installed
 -  Environment file created (`.env.local`)

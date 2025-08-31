@@ -1,4 +1,10 @@
+
 # Issue Tracker (React + Next.js API + PostgreSQL/Neon)
+
+## 🚀 Live Demo
+
+[https://issue-tracker-beta-coral.vercel.app/](https://issue-tracker-beta-coral.vercel.app/)
+
 
 Features:
 - Auth with JWT in httpOnly cookie (signup/login/logout)
@@ -13,6 +19,19 @@ Tech:
 - PostgreSQL (Neon) using @neondatabase/serverless
 - JWT with jose, password hashing with bcryptjs
 - SWR for data fetching and optimistic updates
+
+
+## ⚠️ Installation Note
+
+**If you get errors running `npm install`, use:**
+
+```bash
+npm install --legacy-peer-deps
+```
+
+This is required due to some peer dependency conflicts in the current package versions.
+
+---
 
 ## Setup
 
@@ -113,7 +132,7 @@ Tables: users, issues, comments
 - issues: id (uuid pk), title, description, status ('open'|'closed'), creator_id fk → users(id), created_at, updated_at
 - comments: id (uuid pk), issue_id fk, author_id fk, body, created_at
 
-## Docker Compose (optional)
+## Docker Compose 
 
 For local development without Neon, you can use a local Postgres:
 version: "3.9"
